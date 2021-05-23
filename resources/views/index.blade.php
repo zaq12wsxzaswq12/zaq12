@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>TOP PAGE</h1>
     <p>INDEX_PAGE</p>
 </body>
 </html>
