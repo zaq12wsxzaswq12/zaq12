@@ -56,6 +56,15 @@ class LoginController extends Controller
         if ($user == null) {
             $user = $this->createUserByGoogle($gUser);
         }
+
+        //セッションにユーザー情報を保存
+        $param = array(
+            'id' => $user->id,
+            'name' => $user->name,
+            'email' => $user->email,
+        );
+        session()->put('USER', $param);
+
         // ログイン処理
         \Auth::login($user, true);
         return redirect('/index');
